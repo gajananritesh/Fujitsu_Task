@@ -44,7 +44,6 @@ class Student(Personnel):
                     data3[key] = {"roll_number": roll_number, "classs": classs, "total_marks": total_marks, "stream": stream, "secure_percentage": secure_percentage, "grade": grade}
         # print(data3)
 
-        # Open a json writer, and use the json.dumps(), function to dump data
         return data3    
 
 
@@ -71,7 +70,7 @@ class Student(Personnel):
             dict1[x].update(dict2[x])
             dict3[x] = dict1[x]
 
-
+        # Open a json writer, and use the json.dumps(), # function to dump data
         jsonFilePath4 = r'result/' + 'Student_Record_' + datetime.now().strftime("%Y%m%d") + '.json'
         with open(jsonFilePath4, 'w', encoding='utf-8') as jsonf:
                     jsonf.write(json.dumps(dict3, indent=4))

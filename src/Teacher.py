@@ -50,14 +50,6 @@ class Teacher(Personnel):
                     data4[key] = {"emp_no": emp_no, "class_teacher": class_teacher, "doj": doj, "post": post, "salary": salary, "service_period": service_period, "previous_school": previous_school, "subject_teaches": subject_teaches}
             # print(data4)
         return data4
-        # Open a json writer, and use the json.dumps(), # function to dump data
-        # with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
-        #     jsonf.write(json.dumps(data4, indent=4))
-            
-    # csvFilePath = r'resource/master-data2.csv'
-
-    # Call the make_json function
-    # required_data_teacher(csvFilePath)
 
 
     def teacher_task(self):
@@ -80,10 +72,8 @@ class Teacher(Personnel):
         for y in list2:
             dict5[y].update(dict6[y])
             dict7[y] = dict5[y]
-
-        parsed_date = datetime.now().strftime("%Y%m%d")
-        # csv_file = 'myfile_' + str(datetime.now().strftime('%Y_%m_%d_%H_%M_%S')) + '.csv'
-
+        
+        # Open a json writer, and use the json.dumps(), # function to dump data
         jsonFilePath7 = r'result/' + 'Teacher_Record_' + datetime.now().strftime("%Y%m%d") + '.json'
         with open(jsonFilePath7, 'w', encoding='utf-8') as jsonf:
                     jsonf.write(json.dumps(dict7, indent=4))

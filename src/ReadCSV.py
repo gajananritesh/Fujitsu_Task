@@ -31,11 +31,6 @@ class Personnel:
                 key = rows['id']
                 data[key] = rows
 
-        # with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
-        #     jsonf.write(json.dumps(data, indent=4))
-            
-        # print("Students List = " , student_list)
-        # print("Teachers List = " , teacher_list)
         return student_list, teacher_list
 
 
