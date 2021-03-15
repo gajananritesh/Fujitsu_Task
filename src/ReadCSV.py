@@ -2,7 +2,6 @@ import csv
 import json
 from datetime import datetime, date
 
-
 class Personnel:
 
     def __init__(self):
@@ -85,15 +84,6 @@ class Personnel:
         #     jsonf.write(json.dumps(data2, indent=4))
              
         return data2
-
-# csvFilePath = 'resource/master-data2.csv'
-# jsonFilePath = 'result/Parent_Class.json'
-# jsonFilePath2 = r'result/Original.json'
-# object1 = Personnel()
-
-# object1.make_json(csvFilePath, jsonFilePath2)
-
-# object1.required_data(csvFilePath, jsonFilePath)
 
     
 
